@@ -1,40 +1,9 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>RD Trading</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header>
-<div class="logo">RD Trading</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="cart.html">Cart</a>
-<a href="contact.html">Contact</a>
-</nav>
-</header>
-
-<section class="hero">
-<h1>RD Trading</h1>
-<p>Your favourite online shop in Mauritius</p>
-<a class="btn" href="shop.html">Shop Now</a>
-</section>
-
-<section class="products">
-<h2>Featured Products</h2>
-<div id="productGrid" class="grid"></div>
-</section>
-
-<footer>
-<p>RD Trading — WhatsApp 58905265</p>
-</footer>
-
-<script src="products.js"></script>
-<script src="app.js"></script>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RD Trading · Mauritius</title><link rel="stylesheet" href="assets/css/site.css"></head><body>
+<div data-site-header></div><main>
+<section class="hero"><div class="container hero-card"><div class="hero-grid"><div class="hero-copy"><span class="badge">Clean modern storefront</span><h1>Professional online shopping for Mauritius.</h1><p>RD Trading is designed as a clean, modern store with local delivery, WhatsApp support, dynamic products and a checkout flow ready to be completed with your final inventory and live payment details.</p><div class="hero-actions"><a class="btn btn-brand" href="shop.html">Shop now</a><a class="btn-line" href="https://wa.me/23058905265">Chat on WhatsApp</a></div><div class="hero-points"><span class="pill">Standard delivery · Rs 100</span><span class="pill">Express delivery · Rs 500</span><span class="pill">AI help on every page</span></div></div><div class="hero-image-wrap"><div class="hero-image"><img src="assets/images/hero-tropical.svg" alt="Mauritius inspired hero image"></div><div class="hero-float"><strong>Designed to feel premium.</strong><div class="muted" style="margin-top:6px">Light theme, subtle tropical touch, strong product focus and polished spacing.</div></div></div></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><h2>Shop by category</h2><p>Clear navigation, clean blocks and modern visual hierarchy.</p></div></div><div class="category-grid"><a class="category-card" href="shop.html?category=Beauty"><div class="category-emoji">✨</div><h3>Beauty</h3><p>Skincare and self-care essentials</p></a><a class="category-card" href="shop.html?category=Hair"><div class="category-emoji">💇</div><h3>Hair</h3><p>Tools, oils and treatments</p></a><a class="category-card" href="shop.html?category=Vitamins"><div class="category-emoji">💊</div><h3>Vitamins</h3><p>Daily wellness support</p></a><a class="category-card" href="shop.html?category=Toys"><div class="category-emoji">🧩</div><h3>Toys</h3><p>Learning and play products</p></a><a class="category-card" href="shop.html?category=Lifestyle"><div class="category-emoji">🏝️</div><h3>Lifestyle</h3><p>Modern everyday picks</p></a></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><h2>Featured products</h2><p>Dynamic cards pulled from your product data, not hard-coded into the page.</p></div><a class="btn-line" href="shop.html">View all products</a></div><div class="product-grid" id="featuredProducts"></div></div></section>
+<section class="section"><div class="container benefit-grid"><div class="benefit-card"><div class="badge">01</div><strong>Fast Mauritius delivery</strong><p>Standard, express and pickup options are already built into the experience.</p></div><div class="benefit-card"><div class="badge">02</div><strong>Clear local checkout</strong><p>Cash on delivery, bank transfer, Juice by MCB and card options are presented clearly.</p></div><div class="benefit-card"><div class="badge">03</div><strong>WhatsApp support</strong><p>Customers can move from product browsing to WhatsApp in one tap.</p></div><div class="benefit-card"><div class="badge">04</div><strong>Admin-managed catalog</strong><p>Products, stock, badges and prices are set from the admin area.</p></div></div></section>
+<section class="section"><div class="container"><div class="banner-help"><div><h2 style="margin:0 0 10px">Need help with stock or delivery?</h2><p>The AI assistant answers quick questions, and anything more specific can go directly to WhatsApp support.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-brand" href="faq.html">Open FAQ</a><a class="btn-line" href="https://wa.me/23058905265">WhatsApp support</a></div></div></div></section>
+</main><div data-site-footer></div><div data-site-widgets></div>
+<script src="assets/js/products.js"></script><script src="assets/js/site.js"></script><script>renderHeader();renderFooter();renderFloatingWidgets();renderProductCards("featuredProducts",getProducts().slice(0,8));</script></body></html>

@@ -1,33 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Shop - RD Trading</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<header>
-<div class="logo">RD Trading</div>
-<nav>
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="cart.html">Cart</a>
-</nav>
-</header>
-
-<section class="products">
-<h2>All Products</h2>
-<div id="productGrid" class="grid"></div>
-</section>
-
-<footer>
-<p>RD Trading — WhatsApp 58905265</p>
-</footer>
-
-<script src="products.js"></script>
-<script src="app.js"></script>
-
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shop · RD Trading</title><link rel="stylesheet" href="assets/css/site.css"></head><body>
+<div data-site-header></div><main class="section"><div class="container"><div class="page-hero-card"><span class="badge">All products</span><h1 style="margin:10px 0 0">Modern product grid</h1><p class="muted">Everything below is dynamic and can be managed from the admin area.</p></div>
+<div class="toolbar"><div class="search-wrap"><input class="input" id="searchInput" placeholder="Search products"><select class="select" id="categoryFilter"><option value="">All categories</option><option>Beauty</option><option>Hair</option><option>Vitamins</option><option>Toys</option><option>Lifestyle</option></select></div><div class="muted" id="countText"></div></div>
+<div class="product-grid" id="shopProducts"></div></div></main><div data-site-footer></div><div data-site-widgets></div>
+<script src="assets/js/products.js"></script><script src="assets/js/site.js"></script><script>renderHeader();renderFooter();renderFloatingWidgets();const qp=query();if(qp.get("category"))byId("categoryFilter").value=qp.get("category");function refreshShop(){const s=byId("searchInput").value.toLowerCase().trim();const c=byId("categoryFilter").value;let items=getProducts().filter(p=>(!c||p.category===c)&&(!s||p.name.toLowerCase().includes(s)||p.category.toLowerCase().includes(s)));byId("countText").textContent=items.length+" products";renderProductCards("shopProducts",items);}byId("searchInput").addEventListener("input",refreshShop);byId("categoryFilter").addEventListener("change",refreshShop);refreshShop();</script></body></html>
